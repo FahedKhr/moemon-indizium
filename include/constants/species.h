@@ -1639,7 +1639,6 @@
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    SPECIES_MIMIKYU_BUSTED_TOTEM
 #define SPECIES_CHARIZARD_BEACH                         1524
 
-#define SPECIES_EGG                                     (SPECIES_CHARIZARD_BEACH + 1)
 // Legends Z-A
 #define SPECIES_CLEFABLE_MEGA                           1525
 #define SPECIES_VICTREEBEL_MEGA                         1526

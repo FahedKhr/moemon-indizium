@@ -828,7 +828,7 @@ struct
 {
     const u8 *text;
     TaskFunc func;
-} static const sCursorOptions[MENU_FIELD_MOVES] =
+} static const sCursorOptions[MENU_FIELD_MOVES + 14] =
 {
     [MENU_SUMMARY]         = {COMPOUND_STRING("SUMMARY"),         CursorCb_Summary},
     [MENU_SWITCH]          = {COMPOUND_STRING("SWITCH"),          CursorCb_Switch},
@@ -863,6 +863,21 @@ struct
     [MENU_CATALOG_MOWER]   = {COMPOUND_STRING("Lawn mower"),      CursorCb_CatalogMower},
     [MENU_CHANGE_FORM]     = {COMPOUND_STRING("Change form"),     CursorCb_ChangeForm},
     [MENU_CHANGE_ABILITY]  = {COMPOUND_STRING("Change Ability"),  CursorCb_ChangeAbility},
+    [MENU_STAT_EDIT] = {gText_StatEditor, CursorCb_StatEdit},
+    [MENU_FIELD_MOVES + FIELD_MOVE_CUT] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_FLASH] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_ROCK_SMASH] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_STRENGTH] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_SURF] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_FLY] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_DIVE] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_WATERFALL] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_TELEPORT] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_DIG] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_SECRET_POWER] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_MILK_DRINK] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_SOFT_BOILED] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_SWEET_SCENT] = {COMPOUND_STRING("Change Ability"), CursorCb_FieldMove},
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};

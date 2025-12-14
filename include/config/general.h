@@ -6,11 +6,16 @@
 // still has them in the ROM. This is because the developers forgot
 // to define NDEBUG before release, however this has been changed as
 // Ruby's actual debug build does not use the AGBPrint features.
+//
+// Use `make release` to automatically enable NDEBUG.
+#ifdef RELEASE
 #define NDEBUG
+#endif
 
-// To enable printf debugging, comment out "#define NDEBUG". This allows
+// printf debugging is now enabled by default. This allows
 // the various AGBPrint functions to be used. (See include/gba/isagbprint.h).
 // See below for enabling different pretty printing versions.
+// To disable printf debugging, build a release build using `make release`.
 
 #ifndef NDEBUG
 
@@ -63,6 +68,7 @@
 #define GEN_7 6
 #define GEN_8 7
 #define GEN_9 8
+#define GEN_COUNT 9
 // Changing GEN_LATEST's value to a different Generation will change every default setting that uses it at once.
 #define GEN_LATEST GEN_9
 

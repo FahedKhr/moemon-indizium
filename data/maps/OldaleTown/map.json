@@ -20,13 +20,18 @@
     },
     {
       "map": "MAP_ROUTE101",
-      "offset": 0,
+      "offset": -20,
       "direction": "down"
     },
     {
       "map": "MAP_ROUTE102",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ITHAN_PASSAGE",
+      "offset": -4,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -72,8 +77,8 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_OLDALE_RIVAL",
-      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "local_id": "LOCALID_OLDALE_NPC",
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
       "x": 11,
       "y": 19,
       "elevation": 3,
@@ -84,6 +89,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OldaleTown_EventScript_Rival",
       "flag": "FLAG_HIDE_OLDALE_TOWN_RIVAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_UNUSED_NATU_DOLL",
+      "x": 1,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_ARKOV_ITHAN_DEFEATED"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_UNUSED_NATU_DOLL",
+      "x": 0,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_ARKOV_ITHAN_DEFEATED"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_UNUSED_NATU_DOLL",
+      "x": 1,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_ARKOV_ITHAN_DEFEATED"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 10,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OldaleTown_EventScript_NewNPC1",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -120,7 +177,7 @@
     {
       "type": "trigger",
       "x": 0,
-      "y": 10,
+      "y": 1,
       "elevation": 3,
       "var": "VAR_OLDALE_TOWN_STATE",
       "var_value": "0",
@@ -132,7 +189,7 @@
       "y": 19,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
-      "var_value": "1",
+      "var_value": "0",
       "script": "OldaleTown_EventScript_RivalTrigger1"
     },
     {
@@ -141,7 +198,7 @@
       "y": 19,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
-      "var_value": "1",
+      "var_value": "0",
       "script": "OldaleTown_EventScript_RivalTrigger2"
     },
     {
@@ -150,7 +207,7 @@
       "y": 19,
       "elevation": 3,
       "var": "VAR_OLDALE_RIVAL_STATE",
-      "var_value": "1",
+      "var_value": "0",
       "script": "OldaleTown_EventScript_RivalTrigger3"
     }
   ],

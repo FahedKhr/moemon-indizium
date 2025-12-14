@@ -75,20 +75,6 @@ RustboroCity_EventScript_PleaseSelectPokenav::
 
 RustboroCity_EventScript_MatchCallTutorial::
 	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
-	special ScriptMenu_CreateStartMenuForPokenavTutorial
-	waitstate
-	switch VAR_RESULT
-	case 0, RustboroCity_EventScript_PleaseSelectPokenav
-	case 1, RustboroCity_EventScript_PleaseSelectPokenav
-	case 2, RustboroCity_EventScript_PleaseSelectPokenav
-	case 4, RustboroCity_EventScript_PleaseSelectPokenav
-	case 5, RustboroCity_EventScript_PleaseSelectPokenav
-	case 6, RustboroCity_EventScript_PleaseSelectPokenav
-	case 7, RustboroCity_EventScript_PleaseSelectPokenav
-	case MULTI_B_PRESSED, RustboroCity_EventScript_PleaseSelectPokenav
-	special OpenPokenavForTutorial
-	waitstate
-	delay 20
 	msgbox RustboroCity_Text_IdBetterGetBackToWork, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_RUSTBORO_SCIENTIST, RustboroCity_Movement_ScientistLeave
@@ -1046,9 +1032,9 @@ RustboroCity_Text_YoureNewAroundHere:
 RustboroCity_Text_GymLeaderIsntEasyWithFire:
 	.string "I challenged the GYM LEADER, but…\p"
 	.string "It's not going to be easy winning with\n"
-	.string "my FIRE-type POKéMON…\p"
-	.string "FIRE-type POKéMON don't match up\n"
-	.string "well against ROCK-type POKéMON…$"
+	.string "my Water-type Moémon…\p"
+	.string "Water-type Moémon don't match up\n"
+	.string "well against Bug-type Moémon…$"
 
 RustboroCity_Text_MrBrineyWalksInTheTunnel:
 	.string "The old sailor MR. BRINEY lives in\n"
@@ -1233,9 +1219,9 @@ RustboroCity_Text_DevonCorpSign:
 	.string "it all.”$"
 
 RustboroCity_Text_GymSign:
-	.string "RUSTBORO CITY POKéMON GYM\n"
-	.string "LEADER: ROXANNE\p"
-	.string "“The ROCK-loving honors student!”$"
+	.string "Rustboro City Moémon Gym\n"
+	.string "Leader: Bugsy\p"
+	.string "“The Bug-loving honors student!”$"
 
 RustboroCity_Text_DevonCorpBranchOfficeSign:
 	.string "DEVON CORP. BRANCH OFFICE\p"
@@ -1290,3 +1276,45 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+RustboroCity_EventScript_NewNPC1::
+	msgbox RustboroCity_Text_NewNPC1, MSGBOX_NPC
+	end
+
+RustboroCity_Text_NewNPC1:
+	.string "Moémon are such cute creatures.\p"
+	.string "But I wonder why the same creature\n"
+	.string "can look different from another.\l"
+	.string "member of its own species.$"
+
+RustboroCity_EventScript_NewNPC2::
+	msgbox RustboroCity_Text_NewNPC2, MSGBOX_NPC
+	end
+
+RustboroCity_Text_NewNPC2:
+	.string "Life sucks, not gonna lie.\n"
+	.string "Yet I feel like Moémon make it better.\p"
+	.string "Could you even imagine a world\n"
+	.string "without Moémon?$"
+
+RustboroCity_EventScript_NewNPC3::
+	msgbox RustboroCity_Text_NewNPC3, MSGBOX_NPC
+	end
+
+RustboroCity_Text_NewNPC3:
+	.string "So if I get this correctly, Bug\n"
+	.string "Moémon are weak to Fire right?\p"
+	.string "But then wouldn't that make Bug\n"
+	.string "a slightly different Grass type?\p"
+	.string "Room for thought really.$"
+
+RustboroCity_EventScript_NewNPC4::
+	msgbox RustboroCity_Text_NewNPC4, MSGBOX_NPC
+	end
+
+RustboroCity_Text_NewNPC4:
+	.string "Hold it right there.\p"
+	.string "Another guy stole our package and we\n"
+	.string "need help to get them back.\p"
+	.string "They went north of there, in the\n"
+	.string "Rustboro Sewers.$"

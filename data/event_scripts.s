@@ -884,11 +884,11 @@ Common_EventScript_PlayerHandedOverTheItem::
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
 	.string "“Selected items for your convenience!”\n"
-	.string "POKéMON MART$"
+	.string "MoéMart$"
 
 gText_PokemonCenterSign::
 	.string "“Rejuvenate your tired partners!”\n"
-	.string "POKéMON CENTER$"
+	.string "MoéCenter$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"
@@ -1158,3 +1158,25 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+
+	.include "data/maps/IthanPassage/scripts.inc"
+
+	.include "data/maps/KadobanSouthWing/scripts.inc"
+
+	.include "data/maps/KadobanMiddle/scripts.inc"
+
+	.include "data/maps/KadobanNorth/scripts.inc"
+
+	.include "data/maps/KadobanEast/scripts.inc"
+
+	.include "data/maps/DarkOcean/scripts.inc"
+
+	.include "data/maps/RustboroSewers/scripts.inc"
+
+	.include "data/maps/KadobanWest/scripts.inc"
+
+	.include "data/maps/Route135/scripts.inc"
+
+	.include "data/maps/CherryTower1/scripts.inc"
+
+	.include "data/maps/CherryTower2/scripts.inc"

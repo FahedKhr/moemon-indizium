@@ -15,8 +15,13 @@
   "connections": [
     {
       "map": "MAP_ROUTE101",
-      "offset": 0,
+      "offset": -20,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE135",
+      "offset": -30,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -155,7 +160,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 10,
+      "x": 19,
       "y": 1,
       "elevation": 3,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -164,7 +169,7 @@
     },
     {
       "type": "trigger",
-      "x": 11,
+      "x": 21,
       "y": 1,
       "elevation": 3,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
@@ -173,7 +178,7 @@
     },
     {
       "type": "trigger",
-      "x": 11,
+      "x": 20,
       "y": 1,
       "elevation": 3,
       "var": "VAR_LITTLEROOT_TOWN_STATE",

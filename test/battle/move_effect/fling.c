@@ -445,8 +445,8 @@ SINGLE_BATTLE_TEST("Fling deals damage based on items fling power")
 
     GIVEN {
         ASSUME(GetMovePower(MOVE_CRUNCH) == 80);
-        ASSUME(gItemsInfo[ITEM_VENUSAURITE].flingPower == 80);
-        PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_VENUSAURITE); }
+        ASSUME(gItemsInfo[ITEM_MEGA_GEM].flingPower == 80);
+        PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_MEGA_GEM); }
         OPPONENT(SPECIES_REGIROCK);
     } WHEN {
         TURN { MOVE(player, MOVE_FLING); }

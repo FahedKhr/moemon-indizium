@@ -29,7 +29,7 @@
 * N/A
 #### Fixed
 * N/A
-### ***TheXaman's HGSS Pokédex Plus***:
+### ***TheXaman's HGSS Moédex Plus***:
 #### Added
 * N/A
 #### Changed

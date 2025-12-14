@@ -72,7 +72,7 @@ static void SetNextBattleTentOpponent(void);
 static void CopyEReaderTrainerFarewellMessage(void);
 static void ClearBattleTowerRecord(struct EmeraldBattleTowerRecord *record);
 static void FillTrainerParty(u16 trainerId, u8 firstMonId, u8 monCount);
-static void FillTentTrainerParty_(u16 trainerId, u8 firstMonId, u8 monCount);
+static void FillTentTrainerParty_(u16 trainerId, u16 firstMonId, u16 monCount);
 static void FillFactoryFrontierTrainerParty(u16 trainerId, u8 firstMonId);
 static void FillFactoryTentTrainerParty(u16 trainerId, u8 firstMonId);
 static u8 GetFrontierTrainerFixedIvs(u16 trainerId);
@@ -759,26 +759,26 @@ static const u8 sBattleTowerPartySizes2[] =
 // Trainers are scaled by difficulty, so higher trainer IDs have better teams
 static const u16 sFrontierTrainerIdRanges[][2] =
 {
-    {FRONTIER_TRAINER_BRADY,   FRONTIER_TRAINER_JILL},   //   0 -  99
-    {FRONTIER_TRAINER_TREVIN,  FRONTIER_TRAINER_CHLOE},  //  80 - 119
-    {FRONTIER_TRAINER_ERIK,    FRONTIER_TRAINER_SOFIA},  // 100 - 139
-    {FRONTIER_TRAINER_NORTON,  FRONTIER_TRAINER_JAZLYN}, // 120 - 159
-    {FRONTIER_TRAINER_BRADEN,  FRONTIER_TRAINER_ALISON}, // 140 - 179
-    {FRONTIER_TRAINER_ZACHERY, FRONTIER_TRAINER_LAMAR},  // 160 - 199
-    {FRONTIER_TRAINER_HANK,    FRONTIER_TRAINER_TESS},   // 180 - 219
-    {FRONTIER_TRAINER_JAXON,   FRONTIER_TRAINER_GRETEL}, // 200 - 299
+    {FRONTIER_TRAINER_BRADY,   FRONTIER_TRAINER_GRETEL},   //   0 -  99
+    {FRONTIER_TRAINER_BRADY,  FRONTIER_TRAINER_GRETEL},  //  80 - 119
+    {FRONTIER_TRAINER_BRADY,    FRONTIER_TRAINER_GRETEL},  // 100 - 139
+    {FRONTIER_TRAINER_BRADY,  FRONTIER_TRAINER_GRETEL}, // 120 - 159
+    {FRONTIER_TRAINER_BRADY,  FRONTIER_TRAINER_GRETEL}, // 140 - 179
+    {FRONTIER_TRAINER_BRADY, FRONTIER_TRAINER_GRETEL},  // 160 - 199
+    {FRONTIER_TRAINER_BRADY,    FRONTIER_TRAINER_GRETEL},   // 180 - 219
+    {FRONTIER_TRAINER_BRADY,   FRONTIER_TRAINER_GRETEL}, // 200 - 299
 };
 
 static const u16 sFrontierTrainerIdRangesHard[][2] =
 {
-    {FRONTIER_TRAINER_ERIK,    FRONTIER_TRAINER_CHLOE},  // 100 - 119
-    {FRONTIER_TRAINER_NORTON,  FRONTIER_TRAINER_SOFIA},  // 120 - 139
-    {FRONTIER_TRAINER_BRADEN,  FRONTIER_TRAINER_JAZLYN}, // 140 - 159
-    {FRONTIER_TRAINER_ZACHERY, FRONTIER_TRAINER_ALISON}, // 160 - 179
-    {FRONTIER_TRAINER_HANK,    FRONTIER_TRAINER_LAMAR},  // 180 - 199
-    {FRONTIER_TRAINER_JAXON,   FRONTIER_TRAINER_TESS},   // 200 - 219
-    {FRONTIER_TRAINER_LEON,    FRONTIER_TRAINER_RAUL},   // 220 - 239
-    {FRONTIER_TRAINER_JAXON,   FRONTIER_TRAINER_GRETEL}, // 200 - 299
+    {FRONTIER_TRAINER_BRADY,    FRONTIER_TRAINER_GRETEL},  // 100 - 119
+    {FRONTIER_TRAINER_BRADY,  FRONTIER_TRAINER_GRETEL},  // 120 - 139
+    {FRONTIER_TRAINER_BRADY,  FRONTIER_TRAINER_GRETEL}, // 140 - 159
+    {FRONTIER_TRAINER_BRADY, FRONTIER_TRAINER_GRETEL}, // 160 - 179
+    {FRONTIER_TRAINER_BRADY,    FRONTIER_TRAINER_GRETEL},  // 180 - 199
+    {FRONTIER_TRAINER_BRADY,   FRONTIER_TRAINER_GRETEL},   // 200 - 219
+    {FRONTIER_TRAINER_BRADY,    FRONTIER_TRAINER_GRETEL},   // 220 - 239
+    {FRONTIER_TRAINER_BRADY,   FRONTIER_TRAINER_GRETEL}, // 200 - 299
 };
 
 // Unknown, unused data
@@ -3424,13 +3424,13 @@ static void SetNextBattleTentOpponent(void)
        gSaveBlock2Ptr->frontier.trainerIds[gSaveBlock2Ptr->frontier.curChallengeBattleNum] = TRAINER_BATTLE_PARAM.opponentA;
 }
 
-static void FillTentTrainerParty_(u16 trainerId, u8 firstMonId, u8 monCount)
+static void FillTentTrainerParty_(u16 trainerId, u16 firstMonId, u16 monCount)
 {
     s32 i, j;
     u16 chosenMonIndices[MAX_FRONTIER_PARTY_SIZE];
     u8 level = SetTentPtrsGetLevel();
     u8 fixedIV = 0;
-    u8 bfMonCount;
+    u16 bfMonCount;
     const u16 *monSet = NULL;
     u32 otID = 0;
     u16 monId;

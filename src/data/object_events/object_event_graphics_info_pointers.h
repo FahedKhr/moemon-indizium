@@ -37,6 +37,9 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Youngster;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcher;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SchoolKidM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SchoolKidF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman6;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParasolLady;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Maniac;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiac;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RayquazaStill;
@@ -54,6 +57,12 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RunningTria
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hiker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Painter;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Birdkeeper;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_President;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bugsy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dragon_Tamer;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ruinmaniac;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyclingTriathleteF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nurse;
@@ -289,6 +298,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BUG_CATCHER] =              &gObjectEventGraphicsInfo_BugCatcher,
     [OBJ_EVENT_GFX_PSYCHIC_M] =                &gObjectEventGraphicsInfo_PsychicM,
     [OBJ_EVENT_GFX_SCHOOL_KID_M] =             &gObjectEventGraphicsInfo_SchoolKidM,
+    [OBJ_EVENT_GFX_SCHOOL_KID_F] =             &gObjectEventGraphicsInfo_SchoolKidF,
+    [OBJ_EVENT_GFX_PARASOL_LADY] =             &gObjectEventGraphicsInfo_ParasolLady,
     [OBJ_EVENT_GFX_MANIAC] =                   &gObjectEventGraphicsInfo_Maniac,
     [OBJ_EVENT_GFX_HEX_MANIAC] =               &gObjectEventGraphicsInfo_HexManiac,
     [OBJ_EVENT_GFX_RAYQUAZA_STILL] =           &gObjectEventGraphicsInfo_RayquazaStill,
@@ -298,6 +309,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BEAUTY] =                   &gObjectEventGraphicsInfo_Beauty,
     [OBJ_EVENT_GFX_SCIENTIST_1] =              &gObjectEventGraphicsInfo_Scientist1,
     [OBJ_EVENT_GFX_LASS] =                     &gObjectEventGraphicsInfo_Lass,
+    [OBJ_EVENT_GFX_WOMAN_6] =                  &gObjectEventGraphicsInfo_Woman6,
     [OBJ_EVENT_GFX_GENTLEMAN] =                &gObjectEventGraphicsInfo_Gentleman,
     [OBJ_EVENT_GFX_SAILOR] =                   &gObjectEventGraphicsInfo_Sailor,
     [OBJ_EVENT_GFX_FISHERMAN] =                &gObjectEventGraphicsInfo_Fisherman,
@@ -306,6 +318,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TUBER_F] =                  &gObjectEventGraphicsInfo_TuberF,
     [OBJ_EVENT_GFX_TUBER_M] =                  &gObjectEventGraphicsInfo_TuberM,
     [OBJ_EVENT_GFX_HIKER] =                    &gObjectEventGraphicsInfo_Hiker,
+    [OBJ_EVENT_GFX_BUGSY] =                    &gObjectEventGraphicsInfo_Bugsy,
+    [OBJ_EVENT_GFX_DRAGON_TAMER] =             &gObjectEventGraphicsInfo_Dragon_Tamer,
+    [OBJ_EVENT_GFX_PAINTER] =                  &gObjectEventGraphicsInfo_Painter,
+    [OBJ_EVENT_GFX_BIRDKEEPER] =               &gObjectEventGraphicsInfo_Birdkeeper,
+    [OBJ_EVENT_GFX_PRESIDENT] =                &gObjectEventGraphicsInfo_President,
+    [OBJ_EVENT_GFX_RUINMANIAC] =               &gObjectEventGraphicsInfo_Ruinmaniac,
     [OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M] =     &gObjectEventGraphicsInfo_CyclingTriathleteM,
     [OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F] =     &gObjectEventGraphicsInfo_CyclingTriathleteF,
     [OBJ_EVENT_GFX_NURSE] =                    &gObjectEventGraphicsInfo_Nurse,

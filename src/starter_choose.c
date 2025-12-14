@@ -24,7 +24,7 @@
 #include "constants/songs.h"
 #include "constants/rgb.h"
 
-#define STARTER_MON_COUNT   3
+#define STARTER_MON_COUNT   27
 
 // Position of the sprite of the selected starter Pokémon
 #define STARTER_PKMN_POS_X (DISPLAY_WIDTH / 2)
@@ -103,18 +103,66 @@ static const u8 sPokeballCoords[STARTER_MON_COUNT][2] =
     {180, 64},
 };
 
-static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
+static const u8 sStarterLabelCoords[STARTER_MON_COUNT][26] =
 {
     {0, 9},
+    {0, 9},
+    {0, 9},
+    {0, 9},
+    {0, 9},
+    {0, 9},
+    {0, 9},
+    {0, 9},
+    {0, 9},
     {16, 10},
+    {16, 10},
+    {16, 10},
+    {16, 10},
+    {16, 10},
+    {16, 10},
+    {16, 10},
+    {16, 10},
+    {16, 10},
+    {8, 4},
+    {8, 4},
+    {8, 4},
+    {8, 4},
+    {8, 4},
+    {8, 4},
+    {8, 4},
+    {8, 4},
     {8, 4},
 };
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
+    SPECIES_BULBASAUR,
+    SPECIES_CHIKORITA,
     SPECIES_TREECKO,
+    SPECIES_TURTWIG,
+    SPECIES_SNIVY,
+    SPECIES_CHESPIN,
+    SPECIES_ROWLET,
+    SPECIES_GROOKEY,
+    SPECIES_SPRIGATITO,
+    SPECIES_CHARMANDER,
+    SPECIES_CYNDAQUIL,
     SPECIES_TORCHIC,
+    SPECIES_CHIMCHAR,
+    SPECIES_TEPIG,
+    SPECIES_FENNEKIN,
+    SPECIES_LITTEN,
+    SPECIES_SCORBUNNY,
+    SPECIES_FUECOCO,
+    SPECIES_SQUIRTLE,
+    SPECIES_TOTODILE,
     SPECIES_MUDKIP,
+    SPECIES_PIPLUP,
+    SPECIES_OSHAWOTT,
+    SPECIES_FROAKIE,
+    SPECIES_POPPLIO,
+    SPECIES_SOBBLE,
+    SPECIES_QUAXLY,
 };
 
 static const struct BgTemplate sBgTemplates[3] =
@@ -201,10 +249,34 @@ static const struct OamData sOam_StarterCircle =
     .affineParam = 0,
 };
 
-static const u8 sCursorCoords[][2] =
+static const u8 sCursorCoords[][26] =
 {
     {60, 32},
+    {60, 32},
+    {60, 32},
+    {60, 32},
+    {60, 32},
+    {60, 32},
+    {60, 32},
+    {60, 32},
+    {60, 32},
     {120, 56},
+    {120, 56},
+    {120, 56},
+    {120, 56},
+    {120, 56},
+    {120, 56},
+    {120, 56},
+    {120, 56},
+    {120, 56},
+    {180, 32},
+    {180, 32},
+    {180, 32},
+    {180, 32},
+    {180, 32},
+    {180, 32},
+    {180, 32},
+    {180, 32},
     {180, 32},
 };
 
@@ -511,6 +583,16 @@ static void Task_HandleStarterChooseInput(u8 taskId)
     else if (JOY_NEW(DPAD_RIGHT) && selection < STARTER_MON_COUNT - 1)
     {
         gTasks[taskId].tStarterSelection++;
+        gTasks[taskId].func = Task_MoveStarterChooseCursor;
+    }
+    else if (JOY_NEW(DPAD_UP) && selection > 8)
+    {
+        gTasks[taskId].tStarterSelection -=10;
+        gTasks[taskId].func = Task_MoveStarterChooseCursor;
+    }
+    else if (JOY_NEW(DPAD_DOWN) && selection < STARTER_MON_COUNT - 8)
+    {
+        gTasks[taskId].tStarterSelection +=10;
         gTasks[taskId].func = Task_MoveStarterChooseCursor;
     }
 }

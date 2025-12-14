@@ -43,17 +43,17 @@
 #define TRAINER_ROSE_1                       37
 #define TRAINER_FELIX                        38
 #define TRAINER_VIOLET                       39
-#define TRAINER_ROSE_2                       40
-#define TRAINER_ROSE_3                       41
-#define TRAINER_ROSE_4                       42
-#define TRAINER_ROSE_5                       43
+#define TRAINER_EVENT_ARKOV1                 40
+#define TRAINER_USED_KAID                    41
+#define TRAINER_REMATCH_KAID                 42
+#define TRAINER_DARIAN_2                     43
 #define TRAINER_DUSTY_1                      44
 #define TRAINER_CHIP                         45
 #define TRAINER_FOSTER                       46
 #define TRAINER_DUSTY_2                      47
-#define TRAINER_DUSTY_3                      48
-#define TRAINER_DUSTY_4                      49
-#define TRAINER_DUSTY_5                      50
+#define TRAINER_IVAN_2                       48
+#define TRAINER_LEAF_1                       49
+#define TRAINER_LYLE_2                       50
 #define TRAINER_GABBY_AND_TY_1               51
 #define TRAINER_GABBY_AND_TY_2               52
 #define TRAINER_GABBY_AND_TY_3               53
@@ -332,9 +332,9 @@
 #define TRAINER_JAYLEN                      326
 #define TRAINER_DILLON                      327
 #define TRAINER_CALVIN_2                    328
-#define TRAINER_CALVIN_3                    329
-#define TRAINER_CALVIN_4                    330
-#define TRAINER_CALVIN_5                    331
+#define TRAINER_RICK_2                      329
+#define TRAINER_ALLEN_2                     330
+#define TRAINER_BILLY_2                     331
 #define TRAINER_EDDIE                       332
 #define TRAINER_ALLEN                       333
 #define TRAINER_TIMMY                       334
@@ -613,7 +613,7 @@
 #define TRAINER_HALEY_2                     607
 #define TRAINER_HALEY_3                     608
 #define TRAINER_HALEY_4                     609
-#define TRAINER_HALEY_5                     610
+#define TRAINER_TIANA_2                     610
 #define TRAINER_SALLY                       611
 #define TRAINER_ROBIN                       612
 #define TRAINER_ANDREA                      613
@@ -836,8 +836,8 @@
 #define TRAINER_CRISTIN_4                   830
 #define TRAINER_CRISTIN_5                   831
 #define TRAINER_FERNANDO_2                  832
-#define TRAINER_FERNANDO_3                  833
-#define TRAINER_FERNANDO_4                  834
+#define TRAINER_FERNAND                     833
+#define TRAINER_FERNAND_2                   834
 #define TRAINER_FERNANDO_5                  835
 #define TRAINER_SAWYER_2                    836
 #define TRAINER_SAWYER_3                    837
@@ -845,12 +845,12 @@
 #define TRAINER_SAWYER_5                    839
 #define TRAINER_GABRIELLE_2                 840
 #define TRAINER_GABRIELLE_3                 841
-#define TRAINER_GABRIELLE_4                 842
-#define TRAINER_GABRIELLE_5                 843
+#define TRAINER_STANLEY                     842
+#define TRAINER_STANLEY_2                   843
 #define TRAINER_THALIA_2                    844
-#define TRAINER_THALIA_3                    845
-#define TRAINER_THALIA_4                    846
-#define TRAINER_THALIA_5                    847
+#define TRAINER_KARL                        845
+#define TRAINER_KARL_2                      846
+#define TRAINER_GRUNT_SEWERS                847
 #define TRAINER_MARIELA                     848
 #define TRAINER_ALVARO                      849
 #define TRAINER_EVERETT                     850
@@ -864,7 +864,7 @@
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
 #define TRAINERS_COUNT                      855
-#define MAX_TRAINERS_COUNT                  864
+#define MAX_TRAINERS_COUNT                  1329
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

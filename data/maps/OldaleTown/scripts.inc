@@ -3,7 +3,6 @@ OldaleTown_MapScripts::
 	.byte 0
 
 OldaleTown_OnTransition:
-	call Common_EventScript_SetupRivalGfxId
 	setflag FLAG_VISITED_OLDALE_TOWN
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
 	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
@@ -217,46 +216,45 @@ OldaleTown_EventScript_NotBlockingPath::
 
 OldaleTown_EventScript_Rival::
 	lockall
-	applymovement LOCALID_OLDALE_RIVAL, Common_Movement_FacePlayer
+	applymovement LOCALID_OLDALE_NPC, Common_Movement_FacePlayer
 	waitmovement 0
 	setvar VAR_0x8009, 0
-	goto OldaleTown_EventScript_ShowRivalMessage
+	goto OldaleTown_EventScript_ShowMayMessage
 	end
 
 OldaleTown_EventScript_RivalTrigger1::
 	lockall
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer1
+	applymovement LOCALID_OLDALE_NPC, OldaleTown_Movement_RivalApproachPlayer1
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	setvar VAR_0x8009, 1
-	goto OldaleTown_EventScript_ShowRivalMessage
+	goto OldaleTown_EventScript_ShowMayMessage
 	end
 
 OldaleTown_EventScript_RivalTrigger2::
 	lockall
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer2
+	applymovement LOCALID_OLDALE_NPC, OldaleTown_Movement_RivalApproachPlayer2
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	setvar VAR_0x8009, 1
-	goto OldaleTown_EventScript_ShowRivalMessage
+	goto OldaleTown_EventScript_ShowMayMessage
 	end
 
 OldaleTown_EventScript_RivalTrigger3::
 	lockall
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer3
+	applymovement LOCALID_OLDALE_NPC, OldaleTown_Movement_RivalApproachPlayer3
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	setvar VAR_0x8009, 1
-	goto OldaleTown_EventScript_ShowRivalMessage
+	goto OldaleTown_EventScript_ShowMayMessage
 	end
 
 OldaleTown_EventScript_ShowRivalMessage::
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_ShowMayMessage
-	goto_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_ShowBrendanMessage
+	goto OldaleTown_EventScript_ShowMayMessage
 	end
 
 OldaleTown_EventScript_ShowMayMessage::
@@ -273,9 +271,9 @@ OldaleTown_EventScript_RivalFinish::
 	closemessage
 	call_if_eq VAR_0x8009, 0, OldaleTown_EventScript_DoExitMovement1
 	call_if_eq VAR_0x8009, 1, OldaleTown_EventScript_DoExitMovement2
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
+	applymovement LOCALID_OLDALE_NPC, OldaleTown_Movement_RivalExit
 	waitmovement 0
-	removeobject LOCALID_OLDALE_RIVAL
+	removeobject LOCALID_OLDALE_NPC
 	setvar VAR_OLDALE_RIVAL_STATE, 2
 	setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
 	releaseall
@@ -283,13 +281,13 @@ OldaleTown_EventScript_RivalFinish::
 
 OldaleTown_EventScript_DoExitMovement1::
 	goto_if_ne VAR_FACING, DIR_SOUTH, OldaleTown_EventScript_DoExitMovement2
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
+	applymovement LOCALID_OLDALE_NPC, OldaleTown_Movement_RivalExit
 	waitmovement 0
 	return
 
 OldaleTown_EventScript_DoExitMovement2::
 	applymovement LOCALID_PLAYER, OldaleTown_Movement_WatchRivalExit
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
+	applymovement LOCALID_OLDALE_NPC, OldaleTown_Movement_RivalExit
 	waitmovement 0
 	return
 
@@ -382,9 +380,11 @@ OldaleTown_Text_FinishedSketchingFootprints:
 	.string "own footprints…$"
 
 OldaleTown_Text_MayLetsGoBack:
-	.string "MAY: {PLAYER}{KUN}!\n"
-	.string "Over here!\l"
-	.string "Let's hurry home!$"
+	.string "Oh goodie thank God you're here!\p"
+	.string "Some red haired guy stole the\n"
+	.string "peaceful Moémon's food.\p"
+	.string "They went East of there. Please\n"
+	.string "find them and get the food back.$"
 
 OldaleTown_Text_BrendanLetsGoBack:
 	.string "BRENDAN: I'm heading back to my dad's\n"
@@ -395,3 +395,12 @@ OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
 
+OldaleTown_EventScript_NewNPC1::
+	msgbox OldaleTown_Text_NewNPC1, MSGBOX_NPC
+	end
+
+OldaleTown_Text_NewNPC1:
+	.string "If you talk to a Moémon Trainer that you\n"
+	.string "already defeated.\p"
+	.string "They'll most likely try to battle you\n"
+	.string "again in hopes of winning this time.$"

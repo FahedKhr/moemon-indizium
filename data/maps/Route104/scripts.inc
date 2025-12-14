@@ -842,158 +842,6 @@ Route104_Movement_BrineyExitBoat:
 	walk_in_place_faster_left
 	step_end
 
-Route104_EventScript_Ivan::
-	trainerbattle_single TRAINER_IVAN, Route104_Text_IvanIntro, Route104_Text_IvanDefeat
-	msgbox Route104_Text_IvanPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route104_EventScript_Billy::
-	trainerbattle_single TRAINER_BILLY, Route104_Text_BillyIntro, Route104_Text_BillyDefeat
-	msgbox Route104_Text_BillyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route104_EventScript_Haley::
-	trainerbattle_single TRAINER_HALEY_1, Route104_Text_HaleyIntro, Route104_Text_HaleyDefeat, Route104_EventScript_TryRegisterHaleyAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route104_EventScript_RematchHaley
-	setvar VAR_0x8004, TRAINER_HALEY_1
-	specialvar VAR_RESULT, IsTrainerRegistered
-	goto_if_eq VAR_RESULT, FALSE, Route104_EventScript_TryRegisterHaley
-	msgbox Route104_Text_HaleyPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_EventScript_TryRegisterHaleyAfterBattle::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	goto_if_set FLAG_HAS_MATCH_CALL, Route104_EventScript_RegisterHaleyAfterBattle
-	release
-	end
-
-Route104_EventScript_RegisterHaleyAfterBattle::
-	msgbox Route104_Text_HaleyRegister2, MSGBOX_DEFAULT
-	register_matchcall TRAINER_HALEY_1
-	release
-	end
-
-Route104_EventScript_TryRegisterHaley::
-	goto_if_set FLAG_HAS_MATCH_CALL, Route104_EventScript_RegisterHaley
-	msgbox Route104_Text_HaleyPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_EventScript_RegisterHaley::
-	msgbox Route104_Text_HaleyRegister1, MSGBOX_DEFAULT
-	register_matchcall TRAINER_HALEY_1
-	release
-	end
-
-Route104_EventScript_RematchHaley::
-	trainerbattle_rematch TRAINER_HALEY_1, Route104_Text_HaleyRematchIntro, Route104_Text_HaleyRematchDefeat
-	msgbox Route104_Text_HaleyPostRematch, MSGBOX_AUTOCLOSE
-	end
-
-Route104_EventScript_Winston::
-	trainerbattle_single TRAINER_WINSTON_1, Route104_Text_WinstonIntro, Route104_Text_WinstonDefeat, Route104_EventScript_TryRegisterWinstonAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route104_EventScript_RematchWinston
-	setvar VAR_0x8004, TRAINER_WINSTON_1
-	specialvar VAR_RESULT, IsTrainerRegistered
-	goto_if_eq VAR_RESULT, FALSE, Route104_EventScript_TryRegisterWinston
-	msgbox Route104_Text_WinstonPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_EventScript_TryRegisterWinstonAfterBattle::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	goto_if_set FLAG_HAS_MATCH_CALL, Route104_EventScript_RegisterWinstonAfterBattle
-	release
-	end
-
-Route104_EventScript_RegisterWinstonAfterBattle::
-	msgbox Route104_Text_WinstonRegister2, MSGBOX_DEFAULT
-	register_matchcall TRAINER_WINSTON_1
-	release
-	end
-
-Route104_EventScript_TryRegisterWinston::
-	goto_if_set FLAG_HAS_MATCH_CALL, Route104_EventScript_RegisterWinston
-	msgbox Route104_Text_WinstonPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_EventScript_RegisterWinston::
-	msgbox Route104_Text_WinstonRegister1, MSGBOX_DEFAULT
-	register_matchcall TRAINER_WINSTON_1
-	release
-	end
-
-Route104_EventScript_RematchWinston::
-	trainerbattle_rematch TRAINER_WINSTON_1, Route104_Text_WinstonRematchIntro, Route104_Text_WinstonRematchDefeat
-	msgbox Route104_Text_WinstonPostRematch, MSGBOX_AUTOCLOSE
-	end
-
-Route104_EventScript_Cindy::
-	trainerbattle_single TRAINER_CINDY_1, Route104_Text_CindyIntro, Route104_Text_CindyDefeat, Route104_EventScript_TryRegisterCindyAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route104_EventScript_RematchCindy
-	setvar VAR_0x8004, TRAINER_CINDY_1
-	specialvar VAR_RESULT, IsTrainerRegistered
-	goto_if_eq VAR_RESULT, FALSE, Route104_EventScript_TryRegisterCindy
-	msgbox Route104_Text_CindyPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_EventScript_TryRegisterCindyAfterBattle::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	goto_if_set FLAG_HAS_MATCH_CALL, Route104_EventScript_RegisterCindyAfterBattle
-	release
-	end
-
-Route104_EventScript_RegisterCindyAfterBattle::
-	msgbox Route104_Text_CindyRegister2, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CINDY_1
-	release
-	end
-
-Route104_EventScript_TryRegisterCindy::
-	goto_if_set FLAG_HAS_MATCH_CALL, Route104_EventScript_RegisterCindy
-	msgbox Route104_Text_CindyPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_EventScript_RegisterCindy::
-	msgbox Route104_Text_CindyRegister1, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CINDY_1
-	release
-	end
-
-Route104_EventScript_RematchCindy::
-	trainerbattle_rematch TRAINER_CINDY_1, Route104_Text_CindyRematchIntro, Route104_Text_CindyRematchDefeat
-	msgbox Route104_Text_CindyPostRematch, MSGBOX_AUTOCLOSE
-	end
-
-Route104_EventScript_Gina::
-	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
-	special GetPlayerBigGuyGirlString
-	msgbox Route104_Text_GinaPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_EventScript_Mia::
-	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_MiaIntro, Route104_Text_MiaDefeat, Route104_Text_MiaNotEnoughMons
-	special GetPlayerBigGuyGirlString
-	msgbox Route104_Text_MiaPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_EventScript_Darian::
-	trainerbattle_single TRAINER_DARIAN, Route104_Text_DarianIntro, Route104_Text_DarianDefeat
-	msgbox Route104_Text_DarianPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route104_Text_BrineyLivesInSeasideCottage:
 	.string "That seaside cottage is where\n"
 	.string "MR. BRINEY lives.\p"
@@ -1090,7 +938,7 @@ Route104_Text_RegisteredMay:
 
 Route104_Text_MayHowsYourPokedex:
 	.string "MAY: Oh, by the way, {PLAYER}{KUN},\n"
-	.string "how's your POKéDEX coming along?$"
+	.string "how's your Moédex coming along?$"
 
 Route104_Text_MayMinesDecentLetsBattle:
 	.string "Mine's looking pretty decent.\n"
@@ -1135,7 +983,7 @@ Route104_Text_RegisteredBrendan:
 	.string "in the POKéNAV.$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "BRENDAN: {PLAYER}, how's your POKéDEX?\n"
+	.string "BRENDAN: {PLAYER}, how's your Moédex?\n"
 	.string "Have you filled in any pages yet?$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
@@ -1166,3 +1014,251 @@ Route104_Text_BrendanPostBattle:
 	.string "making POKéMON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
+
+TrainerScript_Billy::
+	trainerbattle_single TRAINER_BILLY, BattleText_Billy_Intro, BattleText_Billy_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Billy_Rematch
+	cleartrainerflag TRAINER_BILLY
+	end
+
+TrainerScript_Billy_Rematch::
+	cleartrainerflag TRAINER_BILLY_2,
+	trainerbattle_single TRAINER_BILLY_2, BattleText_Billy_Intro, BattleText_Billy_Loss
+	end
+
+BattleText_Billy_Intro:
+	.string "Leaving footprints in the sand is\n"
+	.string "so fun!$"
+
+BattleText_Billy_Loss:
+	.string "Waah! I got sand in my runners!\n"
+	.string "They're all gritty!$"
+
+BattleText_Billy_PostBattle:
+	.string "I want to leave my footprints in\n"
+	.string "the sand everywhere, but they\l"
+	.string "disappear quickly…$"
+
+TrainerScript_Darian::
+	trainerbattle_single TRAINER_DARIAN, BattleText_Darian_Intro, BattleText_Darian_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Darian_Rematch
+	cleartrainerflag TRAINER_DARIAN
+	end
+
+TrainerScript_Darian_Rematch::
+	cleartrainerflag TRAINER_DARIAN_2,
+	trainerbattle_single TRAINER_DARIAN_2, BattleText_Darian_Intro, BattleText_Darian_Loss
+	end
+
+BattleText_Darian_Intro:
+	.string "I fished up a tough-looking Moémon!\p"
+	.string "It has this magical quality to it!\n"
+	.string "It surely looks tough, yes it does!$"
+
+BattleText_Darian_Loss:
+	.string "What the…$"
+
+BattleText_Darian_PostBattle:
+	.string "Hey, MAGIKARP, you sure don't live up\n"
+	.string "to your name, do you?$"
+
+TrainerScript_Winston::
+	trainerbattle_single TRAINER_WINSTON_1, BattleText_Winston_Intro, BattleText_Winston_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Winston_Rematch
+	cleartrainerflag TRAINER_WINSTON_1
+	end
+
+TrainerScript_Winston_Rematch::
+	cleartrainerflag TRAINER_WINSTON_2,
+	trainerbattle_single TRAINER_WINSTON_2, BattleText_Winston_Intro, BattleText_Winston_Loss
+	end
+
+BattleText_Winston_Intro:
+	.string "Oh, sure, I'll accept your challenge.\n"
+	.string "I have a lot of money.$"
+
+BattleText_Winston_Loss:
+	.string "Why couldn't I win?$"
+
+BattleText_Winston_PostBattle:
+	.string "There are some things money can't buy.\n"
+	.string "That's Moémon…$"
+
+TrainerScript_Cindy::
+	trainerbattle_single TRAINER_CINDY_1, BattleText_Cindy_Intro, BattleText_Cindy_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Cindy_Rematch
+	cleartrainerflag TRAINER_CINDY_1
+	end
+
+TrainerScript_Cindy_Rematch::
+	cleartrainerflag TRAINER_CINDY_2,
+	trainerbattle_single TRAINER_CINDY_2, BattleText_Cindy_Intro, BattleText_Cindy_Loss
+	end
+
+BattleText_Cindy_Intro:
+	.string "We must have been fated to meet.\n"
+	.string "May I ask you for a battle?$"
+
+BattleText_Cindy_Loss:
+	.string "Oh, my!$"
+
+BattleText_Cindy_PostBattle:
+	.string "“Hello” is the beginning of “good-bye.”\n"
+	.string "I hope we meet again.$"
+
+TrainerScript_Haley::
+	trainerbattle_single TRAINER_HALEY_1, BattleText_Haley_Intro, BattleText_Haley_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Haley_Rematch
+	cleartrainerflag TRAINER_HALEY_1
+	end
+
+TrainerScript_Haley_Rematch::
+	cleartrainerflag TRAINER_HALEY_2,
+	trainerbattle_single TRAINER_HALEY_2, BattleText_Haley_Intro, BattleText_Haley_Loss
+	end
+
+BattleText_Haley_Intro:
+	.string "Should I…\n"
+	.string "Or shouldn't I?\p"
+	.string "Okay, sure, I will battle!$"
+
+BattleText_Haley_Loss:
+	.string "I shouldn't have battled…$"
+
+BattleText_Haley_PostBattle:
+	.string "If you're faced with a decision and\n"
+	.string "you let someone else choose for you,\l"
+	.string "you will regret it, however things\l"
+	.string "turn out.$"
+
+TrainerScript_Gina::
+	trainerbattle_double TRAINER_GINA_AND_MIA_1, BattleText_Gina_Intro, BattleText_Gina_Loss, BattleText_Gina_Denied
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Gina_Rematch
+	cleartrainerflag TRAINER_GINA_AND_MIA_1
+	end
+
+TrainerScript_Gina_Rematch::
+	cleartrainerflag TRAINER_GINA_AND_MIA_2,
+	trainerbattle_double TRAINER_GINA_AND_MIA_2, BattleText_Gina_Intro, BattleText_Gina_Loss, BattleText_Gina_Denied
+	end
+
+BattleText_Gina_Intro:
+	.string "Gina: Okay, let's battle with our\n"
+	.string "Moémon!$"
+
+BattleText_Gina_Loss:
+	.string "Gina: Losing upsets me!$"
+
+BattleText_Gina_PostBattle:
+	.string "Gina: You are strong!\n"
+	.string "We have to train lots more!$"
+
+BattleText_Gina_Denied:
+	.string "Gina: Oh? Only one Moémon?\n"
+	.string "Then, we don't battle with you.\p"
+	.string "If there's only one Moémon, it will\n"
+	.string "be lonesome. That's not nice.$"
+
+TrainerScript_Mia::
+	trainerbattle_double TRAINER_GINA_AND_MIA_1, BattleText_Mia_Intro, BattleText_Mia_Loss, BattleText_Mia_Denied
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Mia_Rematch
+	cleartrainerflag TRAINER_GINA_AND_MIA_1
+	end
+
+TrainerScript_Mia_Rematch::
+	cleartrainerflag TRAINER_GINA_AND_MIA_2,
+	trainerbattle_double TRAINER_GINA_AND_MIA_2, BattleText_Mia_Intro, BattleText_Mia_Loss, BattleText_Mia_Denied
+	end
+
+BattleText_Mia_Intro:
+	.string "Mia: We are twins, so we battle\n"
+	.string "Moémon together.$"
+
+BattleText_Mia_Loss:
+	.string "Mia: We battled together, but we\n"
+	.string "both lost…$"
+
+BattleText_Mia_PostBattle:
+	.string "Mia: We will train our Moémon more\n"
+	.string "and be strong like you.$"
+
+BattleText_Mia_Denied:
+	.string "Mia: You want to battle with us?\p"
+	.string "It's a big no-no if you don't have two\n"
+	.string "Moémon with you.\l"
+	.string "We're too strong for you!$"
+
+TrainerScript_Ivan::
+	trainerbattle_single TRAINER_IVAN, BattleText_Ivan_Intro, BattleText_Ivan_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Ivan_Rematch
+	cleartrainerflag TRAINER_IVAN
+	end
+
+TrainerScript_Ivan_Rematch::
+	cleartrainerflag TRAINER_IVAN_2,
+	trainerbattle_single TRAINER_IVAN_2, BattleText_Ivan_Intro, BattleText_Ivan_Loss
+	end
+
+BattleText_Ivan_Intro:
+	.string "Why keep it a secret?\n"
+	.string "I'm the Water Moémon expert!\p"
+	.string "Huh?\n"
+	.string "You don't know me?$"
+
+BattleText_Ivan_Loss:
+	.string "I thought I wasn't too bad, if I may\n"
+	.string "say so, but I guess not… Bleah…$"
+
+BattleText_Ivan_PostBattle:
+	.string "I got too into fishing.\n"
+	.string "I forgot I had to raise my Moémon…$"
+
+TrainerScript_Stanley::
+	trainerbattle_single TRAINER_STANLEY, BattleText_Stanley_Intro, BattleText_Stanley_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Stanley_Rematch
+	cleartrainerflag TRAINER_STANLEY
+	end
+
+TrainerScript_Stanley_Rematch::
+	cleartrainerflag TRAINER_STANLEY_2,
+	trainerbattle_single TRAINER_STANLEY_2, BattleText_Stanley_Intro, BattleText_Stanley_Loss
+	end
+
+BattleText_Stanley_Intro:
+	.string "Why keep it a secret?\n"
+	.string "I'm the Water Moémon expert!\p"
+	.string "Huh?\n"
+	.string "You don't know me?$"
+
+BattleText_Stanley_Loss:
+	.string "I thought I wasn't too bad, if I may\n"
+	.string "say so, but I guess not… Bleah…$"
+
+BattleText_Stanley_PostBattle:
+	.string "I got too into fishing.\n"
+	.string "I forgot I had to raise my Moémon…$"
+
+TrainerScript_Fernand::
+	trainerbattle_single TRAINER_FERNAND, BattleText_Fernand_Intro, BattleText_Fernand_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Fernand_Rematch
+	cleartrainerflag TRAINER_FERNAND
+	end
+
+TrainerScript_Fernand_Rematch::
+	cleartrainerflag TRAINER_FERNAND_2,
+	trainerbattle_single TRAINER_FERNAND_2, BattleText_Fernand_Intro, BattleText_Fernand_Loss
+	end
+
+BattleText_Fernand_Intro:
+	.string "Why keep it a secret?\n"
+	.string "I'm the Water Moémon expert!\p"
+	.string "Huh?\n"
+	.string "You don't know me?$"
+
+BattleText_Fernand_Loss:
+	.string "I thought I wasn't too bad, if I may\n"
+	.string "say so, but I guess not… Bleah…$"
+
+BattleText_Fernand_PostBattle:
+	.string "I got too into fishing.\n"
+	.string "I forgot I had to raise my Moémon…$"

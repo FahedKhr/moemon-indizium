@@ -297,3 +297,31 @@ Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
+TrainerScript_Kaid::
+	trainerbattle_single TRAINER_USED_KAID, BattleText_Kaid_Intro, BattleText_Kaid_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Kaid_Rematch
+	msgbox BattleText_Kaid_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+TrainerScript_Kaid_Rematch::
+	cleartrainerflag TRAINER_REMATCH_KAID
+	trainerbattle_single TRAINER_REMATCH_KAID, BattleText_Kaid_Intro, BattleText_Kaid_Loss
+	end
+
+BattleText_Kaid_Intro:
+	.string "Wild POKéMON will jump out at you in\n"
+	.string "tall grass.\p"
+	.string "If you want to catch POKéMON, you have\n"
+	.string "to go into the tall grass and search.$"
+
+BattleText_Kaid_Loss:
+	.string "Wild POKéMON will jump out at you in\n"
+	.string "tall grass.\p"
+	.string "If you want to catch POKéMON, you have\n"
+	.string "to go into the tall grass and search.$"
+
+BattleText_Kaid_PostBattle:
+	.string "Wild POKéMON will jump out at you in\n"
+	.string "tall grass.\p"
+	.string "If you want to catch POKéMON, you have\n"
+	.string "to go into the tall grass and search.$"

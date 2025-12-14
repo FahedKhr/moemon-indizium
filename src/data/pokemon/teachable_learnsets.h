@@ -16169,6 +16169,7 @@ static const u16 sClaydolTeachableLearnset[] = {
     MOVE_EXPLOSION,
     MOVE_FACADE,
     MOVE_FLASH,
+    MOVE_FLY,
     MOVE_HYPER_BEAM,
     MOVE_ICE_BEAM,
     MOVE_LIGHT_SCREEN,

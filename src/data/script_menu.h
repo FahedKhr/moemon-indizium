@@ -686,9 +686,9 @@ static const struct MenuAction MultichoiceList_BattlePyramidRules[] =
 
 static const struct MenuAction MultichoiceList_BattlePikeRules[] =
 {
-    {COMPOUND_STRING("POKéNAV AND BAG")},
-    {COMPOUND_STRING("HELD ITEMS")},
-    {COMPOUND_STRING("POKéMON ORDER")},
+    {COMPOUND_STRING("Moénav And Bag")},
+    {COMPOUND_STRING("Held Items")},
+    {COMPOUND_STRING("Moémon Order")},
     {gText_Exit},
 };
 

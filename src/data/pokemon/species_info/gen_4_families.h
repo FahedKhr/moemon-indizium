@@ -16,7 +16,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 45,
         .expYield = 64,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -86,7 +86,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
         .evYield_Attack = 1,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -161,7 +161,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     #endif
         .evYield_Attack = 2,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -230,7 +230,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -304,7 +304,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = 142,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -383,7 +383,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .evYield_Attack = 1,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -452,7 +452,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 63 : 66,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -525,7 +525,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 143,
         .evYield_SpAttack = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -609,7 +609,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = 210,
     #endif
         .evYield_SpAttack = 3,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -727,12 +727,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Starly,
         .iconSprite = gMonIcon_Starly,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_StarlyF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(40, 40),
-        .backPicFemale = gMonBackPic_StarlyF,
-        .backPicSizeFemale = MON_COORDS_SIZE(56, 48),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 1, SHADOW_SIZE_S)
         FOOTPRINT(Starly)
@@ -808,12 +802,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Staravia,
         .iconSprite = gMonIcon_Staravia,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_StaraviaF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(40, 48),
-        .backPicFemale = gMonBackPic_StaraviaF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 5, SHADOW_SIZE_S)
         FOOTPRINT(Staravia)
@@ -896,10 +884,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Staraptor,
         .iconSprite = gMonIcon_Staraptor,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_StaraptorF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(56, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 10, SHADOW_SIZE_M)
         FOOTPRINT(Staraptor)
@@ -980,12 +964,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Bidoof,
         .iconSprite = gMonIcon_Bidoof,
         .iconPalIndex = 2,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_BidoofF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(40, 40),
-        .backPicFemale = gMonBackPic_BidoofF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 40),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(1, 1, SHADOW_SIZE_M)
         FOOTPRINT(Bidoof)
@@ -1064,10 +1042,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Bibarel,
         .iconSprite = gMonIcon_Bibarel,
         .iconPalIndex = 2,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_BibarelF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(56, 48),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-5, 5, SHADOW_SIZE_M)
         FOOTPRINT(Bibarel)
@@ -1089,6 +1063,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         )
         .levelUpLearnset = sBibarelLevelUpLearnset,
         .teachableLearnset = sBibarelTeachableLearnset,
+        .frontPicFemale = gMonFrontPic_BibarelF,
+        .backPicFemale = gMonBackPic_BibarelF,
+        .paletteFemale = gMonPalette_BibarelF,
+        .shinyPaletteFemale = gMonShinyPalette_BibarelF,
     },
 #endif //P_FAMILY_BIDOOF
 
@@ -1158,12 +1136,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Kricketot,
         .iconSprite = gMonIcon_Kricketot,
         .iconPalIndex = 2,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_KricketotF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(48, 48),
-        .backPicFemale = gMonBackPic_KricketotF,
-        .backPicSizeFemale = MON_COORDS_SIZE(48, 56),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(-5, 2, SHADOW_SIZE_S)
         FOOTPRINT(Kricketot)
@@ -1245,12 +1217,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Kricketune,
         .iconSprite = gMonIcon_Kricketune,
         .iconPalIndex = 2,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_KricketuneF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(56, 56),
-        .backPicFemale = gMonBackPic_KricketuneF,
-        .backPicSizeFemale = MON_COORDS_SIZE(56, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-3, 6, SHADOW_SIZE_S)
         FOOTPRINT(Kricketune)
@@ -1327,12 +1293,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Shinx,
         .iconSprite = gMonIcon_Shinx,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_ShinxF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(48, 40),
-        .backPicFemale = gMonBackPic_ShinxF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 48),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(-1, 1, SHADOW_SIZE_S)
         FOOTPRINT(Shinx)
@@ -1408,12 +1368,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Luxio,
         .iconSprite = gMonIcon_Luxio,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_LuxioF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(48, 48),
-        .backPicFemale = gMonBackPic_LuxioF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-4, 2, SHADOW_SIZE_M)
         FOOTPRINT(Luxio)
@@ -1497,12 +1451,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Luxray,
         .iconSprite = gMonIcon_Luxray,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_LuxrayF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
-        .backPicFemale = gMonBackPic_LuxrayF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 10, SHADOW_SIZE_L)
         FOOTPRINT(Luxray)
@@ -1540,7 +1488,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 99,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
@@ -1608,7 +1556,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 199,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
@@ -1679,7 +1627,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 99,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
@@ -1748,7 +1696,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 199,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
@@ -2293,7 +2241,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 49 : 63,
         .evYield_Speed = 1,
         .itemRare = ITEM_HONEY,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -2501,10 +2449,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Pachirisu,
         .iconSprite = gMonIcon_Pachirisu,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_PachirisuF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(48, 56),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(-2, 1, SHADOW_SIZE_S)
         FOOTPRINT(Pachirisu)
@@ -2582,10 +2526,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Buizel,
         .iconSprite = gMonIcon_Buizel,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .backPicFemale = gMonBackPic_BuizelF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 48),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(1, 4, SHADOW_SIZE_S)
         FOOTPRINT(Buizel)
@@ -2665,10 +2605,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Floatzel,
         .iconSprite = gMonIcon_Floatzel,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .backPicFemale = gMonBackPic_FloatzelF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-4, 10, SHADOW_SIZE_M)
         FOOTPRINT(Floatzel)
@@ -3535,7 +3471,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 71,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(75),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -3604,7 +3540,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 183,
         .evYield_Speed = 2,
-        .genderRatio = PERCENT_FEMALE(75),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -3818,7 +3754,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 72,
         .evYield_Defense = 1,
         .itemRare = ITEM_METAL_COAT,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3896,7 +3832,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .evYield_Defense = 1,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_METAL_COAT,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4161,12 +4097,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Gible,
         .iconSprite = gMonIcon_Gible,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_GibleF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(48, 48),
-        .backPicFemale = gMonBackPic_GibleF,
-        .backPicSizeFemale = MON_COORDS_SIZE(56, 48),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(1, 5, SHADOW_SIZE_M)
         FOOTPRINT(Gible)
@@ -4242,12 +4172,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Gabite,
         .iconSprite = gMonIcon_Gabite,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_GabiteF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
-        .backPicFemale = gMonBackPic_GabiteF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 8, SHADOW_SIZE_M)
         FOOTPRINT(Gabite)
@@ -4332,10 +4256,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Garchomp,
         .iconSprite = gMonIcon_Garchomp,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_GarchompF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(5, 11, SHADOW_SIZE_L)
         FOOTPRINT(Garchomp)
@@ -4445,7 +4365,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 57 : 72,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -4516,7 +4436,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 204,
         .evYield_Attack = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -4586,7 +4506,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = 219,
         .evYield_Attack = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -4696,14 +4616,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Hippopotas,
         .iconSprite = gMonIcon_Hippopotas,
         .iconPalIndex = 1,
-#if P_GENDER_DIFFERENCES
-        .paletteFemale = gMonPalette_HippopotasF,
-        .shinyPaletteFemale = gMonShinyPalette_HippopotasF,
-    #if P_CUSTOM_GENDER_DIFF_ICONS == TRUE
-        .iconSpriteFemale = gMonIcon_HippopotasF,
-        .iconPalIndexFemale = 1,
-    #endif
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, -1, SHADOW_SIZE_L)
         FOOTPRINT(Hippopotas)
@@ -4779,14 +4691,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Hippowdon,
         .iconSprite = gMonIcon_Hippowdon,
         .iconPalIndex = 1,
-#if P_GENDER_DIFFERENCES
-        .paletteFemale = gMonPalette_HippowdonF,
-        .shinyPaletteFemale = gMonShinyPalette_HippowdonF,
-    #if P_CUSTOM_GENDER_DIFF_ICONS == TRUE
-        .iconSpriteFemale = gMonIcon_HippowdonF,
-        .iconPalIndexFemale = 1,
-    #endif
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         NO_SHADOW
         FOOTPRINT(Hippowdon)
@@ -5021,12 +4925,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Croagunk,
         .iconSprite = gMonIcon_Croagunk,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_CroagunkF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(40, 48),
-        .backPicFemale = gMonBackPic_CroagunkF,
-        .backPicSizeFemale = MON_COORDS_SIZE(56, 56),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(2, 4, SHADOW_SIZE_S)
         FOOTPRINT(Croagunk)
@@ -5106,12 +5004,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Toxicroak,
         .iconSprite = gMonIcon_Toxicroak,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_ToxicroakF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(56, 56),
-        .backPicFemale = gMonBackPic_ToxicroakF,
-        .backPicSizeFemale = MON_COORDS_SIZE(56, 56),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 7, SHADOW_SIZE_M)
         FOOTPRINT(Toxicroak)
@@ -5273,12 +5165,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Finneon,
         .iconSprite = gMonIcon_Finneon,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_FinneonF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(32, 40),
-        .backPicFemale = gMonBackPic_FinneonF,
-        .backPicSizeFemale = MON_COORDS_SIZE(56, 40),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 1, SHADOW_SIZE_S)
         FOOTPRINT(Finneon)
@@ -5358,12 +5244,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Lumineon,
         .iconSprite = gMonIcon_Lumineon,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_LumineonF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(56, 56),
-        .backPicFemale = gMonBackPic_LumineonF,
-        .backPicSizeFemale = MON_COORDS_SIZE(56, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 8, SHADOW_SIZE_M)
         FOOTPRINT(Lumineon)
@@ -5441,12 +5321,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Snover,
         .iconSprite = gMonIcon_Snover,
         .iconPalIndex = 1,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_SnoverF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(64, 48),
-        .backPicFemale = gMonBackPic_SnoverF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 56),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 4, SHADOW_SIZE_M)
         FOOTPRINT(Snover)
@@ -5525,10 +5399,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Abomasnow,
         .iconSprite = gMonIcon_Abomasnow,
         .iconPalIndex = 1,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_AbomasnowF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 11, SHADOW_SIZE_L)
         FOOTPRINT(Abomasnow)
@@ -5641,7 +5511,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 132,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -5722,7 +5592,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -5793,7 +5663,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -5865,7 +5735,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -5935,7 +5805,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -6030,7 +5900,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -6111,7 +5981,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     #endif
         .evYield_Defense = 2,
         .evYield_SpDefense = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 80,
         .friendship = 140,
         .growthRate = GROWTH_SLOW,
@@ -6191,7 +6061,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .evYield_Attack = 1,
         .evYield_SpAttack = 1,
         .evYield_SpDefense = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 80,
         .friendship = 140,
         .growthRate = GROWTH_SLOW,
@@ -6275,7 +6145,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     #endif
         .evYield_Attack = 2,
         .evYield_SpAttack = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 80,
         .friendship = 140,
         .growthRate = GROWTH_SLOW,
@@ -6355,7 +6225,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 3,
         .expYield = DIALGA_EXP_YIELD,
         .evYield_SpAttack = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
@@ -6426,7 +6296,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 3,
         .expYield = DIALGA_EXP_YIELD,
         .evYield_SpAttack = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
@@ -6504,7 +6374,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 3,
         .expYield = PALKIA_EXP_YIELD,
         .evYield_SpAttack = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
@@ -6575,7 +6445,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 3,
         .expYield = PALKIA_EXP_YIELD,
         .evYield_SpAttack = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
@@ -6728,7 +6598,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = 220,
     #endif
         .evYield_Attack = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
@@ -6806,7 +6676,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 3,
         .expYield = GIRATINA_EXP_YIELD,
         .evYield_HP = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
@@ -6878,7 +6748,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 3,
         .expYield = GIRATINA_EXP_YIELD,
         .evYield_HP = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
@@ -7042,7 +6912,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = 165,
     #endif
         .evYield_HP = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 40,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -7119,7 +6989,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = 215,
     #endif
         .evYield_HP = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -7199,7 +7069,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     #endif
         .evYield_Speed = 1,
         .evYield_SpAttack = 2,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
@@ -7282,7 +7152,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .evYield_HP = 3,
         .itemCommon = ITEM_LUM_BERRY,
         .itemRare = ITEM_LUM_BERRY,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 100,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -7360,7 +7230,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     #endif
         .itemCommon = ITEM_LUM_BERRY,
         .itemRare = ITEM_LUM_BERRY,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 120,
         .friendship = 100,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -7452,7 +7322,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 3,                                                             \
         .expYield = ARCEUS_EXP_YIELD,                                               \
         .evYield_HP = 3,                                                            \
-        .genderRatio = MON_GENDERLESS,                                              \
+        .genderRatio = PERCENT_FEMALE(50),                                              \
         .eggCycles = 120,                                                           \
         .friendship = 0,                                                            \
         .growthRate = GROWTH_SLOW,                                                  \

@@ -550,7 +550,7 @@ PetalburgCity_EventScript_Scott::
 	closemessage
 	applymovement LOCALID_PETALBURG_SCOTT, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	delay 30
+	trainerbattle_no_intro TRAINER_LEAF_1, BattleText_Leaf1_PostBattle
 	msgbox PetalburgCity_Text_ImLookingForTalentedTrainers, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_0x8008, 0, PetalburgCity_EventScript_ScottExit0
@@ -744,18 +744,21 @@ PetalburgCity_Text_WallyHouseSign:
 	.string "WALLY'S HOUSE$"
 
 PetalburgCity_Text_AreYouATrainer:
-	.string "Excuse me!\p"
-	.string "Let me guess, from the way you're\n"
-	.string "dressed, are you a POKéMON TRAINER?$"
+	.string "Hey hey hey!\p"
+	.string "Sorry but there's a gym in Rustboro City\n"
+	.string "that I really want to try.$"
 
 PetalburgCity_Text_WellMaybeNot:
-	.string "… … … … … …\p"
-	.string "Well, maybe not.\n"
-	.string "Your clothes aren't all that dirty.\p"
-	.string "You're either a rookie TRAINER,\n"
-	.string "or maybe you're just an ordinary kid.$"
+	.string "May I ask you a favor?\p"
+	.string "I want to challenge you to a battle.\n"
+	.string "So I can know how good my team is!\p"
+	.string "Oh I didn't introduce myself, sorry...\n"
+	.string "I'm Leaf, and I'm about to beat you.$"
 
 PetalburgCity_Text_ImLookingForTalentedTrainers:
-	.string "I'm roaming the land in search of\n"
-	.string "talented TRAINERS.\p"
+	.string "Welp I'll have work to do that's for sure.\n"
+	.string "Thanks a lot for this!\p"
 	.string "I'm sorry to have taken your time.$"
+
+BattleText_Leaf1_PostBattle:
+	.string "Okay okay, you're good.$"

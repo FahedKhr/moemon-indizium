@@ -1121,7 +1121,6 @@ static u32 GetNumRegisteredTrainers(void)
     u32 i, count;
     for (i = 0, count = 0; i < REMATCH_SPECIAL_TRAINER_START; i++)
     {
-        if (FlagGet(TRAINER_REGISTERED_FLAGS_START + i))
             count++;
     }
 

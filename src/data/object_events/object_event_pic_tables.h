@@ -89,6 +89,10 @@ static const struct SpriteFrameImage sPicTable_RichBoy[] = {
     overworld_ascending_frames(gObjectEventPic_RichBoy, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_Dragon_Tamer[] = {
+    overworld_ascending_frames(gObjectEventPic_Dragon_Tamer, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Woman1[] = {
     overworld_ascending_frames(gObjectEventPic_Woman1, 2, 4),
 };
@@ -197,6 +201,10 @@ static const struct SpriteFrameImage sPicTable_SchoolKidM[] = {
     overworld_ascending_frames(gObjectEventPic_SchoolKidM, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_SchoolKidF[] = {
+    overworld_ascending_frames(gObjectEventPic_SchoolKidF, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Maniac[] = {
     overworld_ascending_frames(gObjectEventPic_Maniac, 2, 4),
 };
@@ -259,6 +267,34 @@ static const struct SpriteFrameImage sPicTable_TuberM[] = {
 
 static const struct SpriteFrameImage sPicTable_Hiker[] = {
     overworld_ascending_frames(gObjectEventPic_Hiker, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Painter[] = {
+    overworld_ascending_frames(gObjectEventPic_Painter, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Birdkeeper[] = {
+    overworld_ascending_frames(gObjectEventPic_Birdkeeper, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Woman6[] = {
+    overworld_ascending_frames(gObjectEventPic_Woman6, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_ParasolLady[] = {
+    overworld_ascending_frames(gObjectEventPic_ParasolLady, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_President[] = {
+    overworld_ascending_frames(gObjectEventPic_President, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Bugsy[] = {
+    overworld_ascending_frames(gObjectEventPic_Bugsy, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Ruinmaniac[] = {
+    overworld_ascending_frames(gObjectEventPic_Ruinmaniac, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_CyclingTriathleteM[] = {

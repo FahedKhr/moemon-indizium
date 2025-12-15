@@ -1,4 +1,5 @@
 #include "game_corner_block_stacker.h"
+#include "config/game_corner_expansion.h"
 #include "global.h"
 #include "malloc.h"
 #include "battle.h"

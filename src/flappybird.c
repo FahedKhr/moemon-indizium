@@ -1,4 +1,5 @@
 #include "flappybird.h"
+#include "config/game_corner_expansion.h"
 #include "global.h"
 #include "malloc.h"
 #include "battle.h"

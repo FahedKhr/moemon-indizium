@@ -1,5 +1,6 @@
 //#include "game_corner_blackjack.h"
 #include "derby.h"
+#include "config/game_corner_expansion.h"
 #include "global.h"
 #include "malloc.h"
 #include "battle.h"

@@ -1,6 +1,6 @@
 #include "global.h"
 #include "constants/songs.h"
-
+#include "config/game_corner_expansion.h"
 #include "palette.h"
 #include "coins.h"
 #include "main.h"

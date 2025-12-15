@@ -16560,25 +16560,25 @@ Tynamo
 Level: 8
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_FERNANDO_5 ===
-Name: FERNANDO
-Class: Guitarist
-Pic: Guitarist
+=== TRAINER_ALFREDAN ===
+Name: Alfredan
+Class: School Kid
+Pic: School Kid M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Manectric
-Level: 41
+Electrike
+Level: 5
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Manectric
-Level: 41
+Combee
+Level: 6
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Exploud
-Level: 41
+Whismur
+Level: 8
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_SAWYER_2 ===
@@ -16598,25 +16598,25 @@ Numel
 Level: 26
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_SAWYER_3 ===
-Name: SAWYER
-Class: Hiker
-Pic: Hiker
+=== TRAINER_ALFREDAN_2 ===
+Name: Alfredan
+Class: School Kid
+Pic: School Kid M
 Gender: Male
-Music: Hiker
+Music: Intense
 Double Battle: No
 AI: Basic Trainer
 
-Machop
-Level: 28
+Electrike
+Level: 5
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Numel
-Level: 28
+Combee
+Level: 6
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Graveler
-Level: 28
+Whismur
+Level: 8
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_SAWYER_4 ===

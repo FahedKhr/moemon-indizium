@@ -25,9 +25,7 @@ MauvilleCity_GameCorner_MapScripts::
 	.set COINS_PRICE_500, 10000
 
 TrainerId_Onframe:
-.if GAME_CORNER_VAR_ID_CHECK != 0
-	map_script_2 GAME_CORNER_VAR_ID_CHECK, 0, BouncerCheck
-.endif
+	map_script_2 VAR_GAMECORNER_BULLSHIT_13, 0, BouncerCheck
 	.2byte 0
 	
 BouncerCheck::
@@ -43,7 +41,7 @@ BouncerCheck::
 	waitmovement 0
 	msgbox MauvilleCity_GameCorner_Text_Bouncer1, MSGBOX_DEFAULT
 	closemessage
-	setvar GAME_CORNER_VAR_ID_CHECK, 1
+	setvar VAR_GAMECORNER_BULLSHIT_13, 1
 	applymovement LOCALID_BOUNCER, Movement_Bouncer_Leave
 	waitmovement 0
 	releaseall
@@ -88,13 +86,13 @@ MauvilleCity_GameCorner_EventScript_Derby::
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 MauvilleCity_GameCorner_EventScript_CheckWinnings::
-	goto_if_eq GAME_CORNER_VAR_WINNINGS, 0, MauvilleCity_GameCorner_NoWin
+	goto_if_eq VAR_GAMECORNER_BULLSHIT_13, 0, MauvilleCity_GameCorner_NoWin
 	showcoinsbox 1, 1
-	buffernumberstring STR_VAR_1, GAME_CORNER_VAR_WINNINGS
+	buffernumberstring STR_VAR_1, VAR_GAMECORNER_BULLSHIT_13
 	msgbox PB_YOU_WON_TEXT, MSGBOX_DEFAULT
 	waitmessage
-	addcoins GAME_CORNER_VAR_WINNINGS
-	setvar GAME_CORNER_VAR_WINNINGS, 0
+	addcoins VAR_GAMECORNER_BULLSHIT_13
+	setvar VAR_GAMECORNER_BULLSHIT_13, 0
 	updatecoinsbox 1, 1
 	playse SE_SHOP
 	delay 40
@@ -321,7 +319,7 @@ MauvilleCity_GameCorner_EventScript_VoltorbFlip::
 	delay 40
 	hidecoinsbox 0, 5
 	playbgm MUS_RG_OAK, FALSE
-	setvar GAME_CORNER_VAR_WINNINGS, 0
+	setvar VAR_GAMECORNER_BULLSHIT_13, 0
 	special Special_ViewVoltorbFlip
 	waitstate
 	goto_if_eq VAR_RESULT, 0, VF_Come_Again
@@ -333,13 +331,13 @@ VF_Come_Again::
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	msgbox VF_Come_Again_Text, MSGBOX_DEFAULT
-	setvar GAME_CORNER_VAR_WINNINGS, 0
+	setvar VAR_GAMECORNER_BULLSHIT_13, 0
 	releaseall
 	end
 	
 VF_Go_On::
 	showcoinsbox 1, 1
-	buffernumberstring STR_VAR_1, GAME_CORNER_VAR_WINNINGS	
+	buffernumberstring STR_VAR_1, VAR_GAMECORNER_BULLSHIT_13	
 	msgbox MauvilleCity_GameCorner_Text_VF_Keep_Going, MSGBOX_YESNO
 	closemessage
 	goto_if_eq VAR_RESULT, NO, VF_Cash_Out
@@ -355,11 +353,9 @@ VF_Loop::
 	end
 	
 VF_Cash_Out::	
-	addcoins GAME_CORNER_VAR_WINNINGS
-	setvar GAME_CORNER_VAR_WINNINGS, 0
-.if FLIP_VAR_LEVEL != 0
-	setvar FLIP_VAR_LEVEL, 0
-.endif
+	addcoins VAR_GAMECORNER_BULLSHIT_13
+	setvar VAR_GAMECORNER_BULLSHIT_13, 0
+	setvar VAR_GAMECORNER_BULLSHIT_15, 0
 	updatecoinsbox 1, 1
 	playse SE_SHOP
 	savebgm MUS_DUMMY

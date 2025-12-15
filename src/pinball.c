@@ -1,4 +1,5 @@
 #include "global.h"
+#include "config/game_corner_expansion.h"
 #include "bg.h"
 #include "decompress.h"
 #include "event_data.h"

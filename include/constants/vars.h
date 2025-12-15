@@ -242,11 +242,11 @@
 #define VAR_ARKOV_DEFEATED_PASSAGE                       0x40DE
 #define VAR_GIFT_UNUSED_2                                0x40DF // Var is written to, but never read
 #define VAR_GIFT_UNUSED_3                                0x40E0 // Var is written to, but never read
-#define VAR_GIFT_UNUSED_4                                0x40E1 // Var is written to, but never read
-#define VAR_GIFT_UNUSED_5                                0x40E2 // Var is written to, but never read
-#define VAR_GIFT_UNUSED_6                                0x40E3 // Var is written to, but never read
-#define VAR_GIFT_UNUSED_7                                0x40E4 // var is written to, but never read
-#define VAR_UNUSED_0x40E5                                0x40E5 // Unused Var
+#define VAR_GAMECORNER_BULLSHIT_15                       0x40E1 // Var is written to, but never read
+#define VAR_GAMECORNER_BULLSHIT_14                       0x40E2
+#define VAR_GAMECORNER_BULLSHIT_13                       0x40E3
+#define VAR_GAMECORNER_BULLSHIT_12                       0x40E4
+#define VAR_GAMECORNER_BULLSHIT_11                       0x40E5
 #define VAR_DAILY_SLOTS                                  0x40E6
 #define VAR_DAILY_WILDS                                  0x40E7
 #define VAR_DAILY_BLENDER                                0x40E8
@@ -264,15 +264,15 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_GAMECORNER_BULLSHIT_10                       0x40F7
+#define VAR_GAMECORNER_BULLSHIT_9                        0x40F8
+#define VAR_GAMECORNER_BULLSHIT_8                        0x40F9
+#define VAR_GAMECORNER_BULLSHIT_7                        0x40FA
+#define VAR_GAMECORNER_BULLSHIT_6                        0x40FB
+#define VAR_GAMECORNER_BULLSHIT_5                        0x40FC
+#define VAR_GAMECORNER_BULLSHIT_4                        0x40FD
+#define VAR_GAMECORNER_BULLSHIT_3                        0x40FE
+#define VAR_GAMECORNER_BULLSHIT_2                        0x40FF
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
@@ -300,7 +300,7 @@
 #define VAR_CONTEST_CATEGORY          0x8011
 #define VAR_MON_BOX_ID                0x8012
 #define VAR_MON_BOX_POS               0x8013
-#define VAR_UNUSED_0x8014             0x8014
+#define VAR_GAMECORNER_BULLSHIT_1     0x8014
 #define VAR_TRAINER_BATTLE_OPPONENT_A 0x8015 // Alias of TRAINER_BATTLE_PARAM.opponentA
 
 #define SPECIAL_VARS_END              0x8015

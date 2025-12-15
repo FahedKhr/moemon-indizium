@@ -838,9 +838,9 @@
 #define TRAINER_FERNANDO_2                  832
 #define TRAINER_FERNAND                     833
 #define TRAINER_FERNAND_2                   834
-#define TRAINER_FERNANDO_5                  835
+#define TRAINER_ALFREDAN                    835
 #define TRAINER_SAWYER_2                    836
-#define TRAINER_SAWYER_3                    837
+#define TRAINER_ALFREDAN_2                  837
 #define TRAINER_SAWYER_4                    838
 #define TRAINER_SAWYER_5                    839
 #define TRAINER_GABRIELLE_2                 840

@@ -1262,3 +1262,28 @@ BattleText_Fernand_Loss:
 BattleText_Fernand_PostBattle:
 	.string "I got too into fishing.\n"
 	.string "I forgot I had to raise my Moémon…$"
+
+TrainerScript_Alfredan::
+	trainerbattle_single TRAINER_ALFREDAN, BattleText_Alfredan_Intro, BattleText_Alfredan_Loss
+	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerScript_Alfredan_Rematch
+	cleartrainerflag TRAINER_ALFREDAN
+	end
+
+TrainerScript_Alfredan_Rematch::
+	cleartrainerflag TRAINER_ALFREDAN_2,
+	trainerbattle_single TRAINER_ALFREDAN_2, BattleText_Alfredan_Intro, BattleText_Alfredan_Loss
+	end
+
+BattleText_Alfredan_Intro:
+	.string "Why keep it a secret?\n"
+	.string "I'm the Water Moémon expert!\p"
+	.string "Huh?\n"
+	.string "You don't know me?$"
+
+BattleText_Fernandan_Loss:
+	.string "I thought I wasn't too bad, if I may\n"
+	.string "say so, but I guess not… Bleah…$"
+
+BattleText_Fernandan_PostBattle:
+	.string "I got too into fishing.\n"
+	.string "I forgot I had to raise my Moémon…$"
